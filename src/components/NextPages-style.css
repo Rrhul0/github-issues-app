@@ -1,0 +1,30 @@
+.next-pages {
+  margin-block: 15px;
+  margin-inline: auto;
+  display: flex;
+  gap: 5px;
+  width: 50vw;
+}
+.page-btn {
+  all: unset;
+  padding-inline: 12px;
+  padding-block: 6px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  /* background-color: rgb(14, 123, 224); */
+}
+.page-btn-txt {
+  color: var(--color-bg-dark-hover);
+}
+.page-btn:hover {
+  outline: 2px solid var(--color-bg-dark-hover);
+}
+.active {
+  background-color: var(--color-bg-dark-hover);
+}
+.disabled-btn {
+  color: var(--color-disabled-btn);
+}
+.disabled-btn:hover {
+  outline: 0;
+}
