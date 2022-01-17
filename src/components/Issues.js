@@ -12,6 +12,7 @@ function Issues(props){
     })
 
     useEffect(()=>{
+        console.log('ran')
             setIssues([])
             fetch(`https://api.github.com/repos/${props.owner}/${props.repo}/issues?page=${pages.currentPage}`)
             .then(resp => {
