@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/github-issues-app/static/css/main.277be1d8.css",
-    "main.js": "/github-issues-app/static/js/main.73ca5778.js",
+    "main.js": "/github-issues-app/static/js/main.9b088f3e.js",
     "index.html": "/github-issues-app/index.html",
     "main.277be1d8.css.map": "/github-issues-app/static/css/main.277be1d8.css.map",
-    "main.73ca5778.js.map": "/github-issues-app/static/js/main.73ca5778.js.map"
+    "main.9b088f3e.js.map": "/github-issues-app/static/js/main.9b088f3e.js.map"
   },
   "entrypoints": [
     "static/css/main.277be1d8.css",
-    "static/js/main.73ca5778.js"
+    "static/js/main.9b088f3e.js"
   ]
 }
