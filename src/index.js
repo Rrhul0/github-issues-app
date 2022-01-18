@@ -12,6 +12,6 @@ import Issues from './components/Issues';
 // })
 
 ReactDOM.render(
-    <Issues />,
+    <Issues owner='facebook' repo='react' />,
     document.getElementById('root')
 );

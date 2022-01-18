@@ -3,9 +3,9 @@
   margin-inline: auto;
   display: flex;
   gap: 5px;
-  width: 50vw;
+  width: max-content;
 }
-.page-btn {
+.next-pages > button {
   all: unset;
   padding-inline: 12px;
   padding-block: 6px;
@@ -13,18 +13,23 @@
   border-radius: 5px;
   /* background-color: rgb(14, 123, 224); */
 }
-.page-btn-txt {
-  color: var(--color-bg-dark-hover);
+.text-btn {
+  color: var(--color-bg-dark-hover) !important;
 }
-.page-btn:hover {
-  outline: 2px solid var(--color-bg-dark-hover);
+.next-pages > button:hover {
+  /* outline: 2px solid var(--color-bg-dark-hover); */
+  box-shadow: 0 0 0 2px var(--color-bg-dark-hover);
 }
 .active {
-  background-color: var(--color-bg-dark-hover);
+  background-color: var(--color-bg-dark-hover) !important;
 }
 .disabled-btn {
-  color: var(--color-disabled-btn);
+  color: var(--color-disabled-btn) !important;
 }
 .disabled-btn:hover {
-  outline: 0;
+  box-shadow: none !important;
+}
+.gap {
+  padding-inline: 5px;
+  padding-top: 8px;
 }

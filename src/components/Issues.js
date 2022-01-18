@@ -12,24 +12,23 @@ function Issues(props){
     })
 
     useEffect(()=>{
-        console.log('ran')
-            setIssues([])
-            fetch(`https://api.github.com/repos/${props.owner}/${props.repo}/issues?page=${pages.currentPage}`)
-            .then(resp => {
-                const linkHeader = resp.headers.get('Link')
-                // link header is a string 
-                //so need to perse it to get next page and last
-                const linkHeaderSplited = linkHeader.split('page=')
-                let lastPage = linkHeaderSplited[2].split('>;')[0]
-                
-                setPages({
-                    currentPage:pages.currentPage,
-                    lastPage:pages.lastPage?pages.lastPage:lastPage,
-                })
-                return resp.json()
+        setIssues([])
+        fetch(`https://api.github.com/repos/${props.owner}/${props.repo}/issues?page=${pages.currentPage}`)
+        .then(resp => {
+            const linkHeader = resp.headers.get('Link')
+            // link header is a string 
+            //so need to perse it to get next page and last
+            const linkHeaderSplited = linkHeader.split('page=')
+            let lastPage = linkHeaderSplited[2].split('>;')[0]
+            
+            setPages({
+                currentPage:pages.currentPage,
+                lastPage:pages.lastPage?pages.lastPage:lastPage,
             })
-            .then(json =>{if (json) setIssues(json)})
-            },[props.owner, props.repo,pages.currentPage])
+            return resp.json()
+        })
+        .then(json =>{if (json) setIssues(json)})
+        },[props.owner, props.repo,pages.currentPage])
 
     function onClickPagesHandler(i){
         setPages({
