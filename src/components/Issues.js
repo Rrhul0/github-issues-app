@@ -62,8 +62,7 @@ function Issues(props){
                 onClickPagesHandler = {onClickPagesHandler}
             />
         </div>
-    )
-    }
+    )}
 
 
 export default Issues

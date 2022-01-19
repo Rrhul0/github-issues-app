@@ -1,4 +1,3 @@
-import {Fragment} from 'react'
 import './NextPages-style.css'
 
 export default function NextPages(props){
@@ -22,17 +21,16 @@ export default function NextPages(props){
         })
         buttons = finalPagesToShow.map((pageNo,i,self) => {
             return(
-                <Fragment>
-                {pageNo === self[i-1]+1?'':i?<span className='gap'>...</span>:''}
-                <button 
-                    key={pageNo} 
-                    className={currentPage===pageNo?'active':''}
-                    onClick={props.onClickPage}
-                >
-                    {pageNo}
-                </button>
-                
-                </Fragment>
+                <>
+                    {pageNo === self[i-1]+1?'':i?<span className='gap'>...</span>:''}
+                    <button 
+                        key={pageNo} 
+                        className={currentPage===pageNo?'active':''}
+                        onClick={props.onClickPage}
+                    >
+                        {pageNo}
+                    </button>
+                </>
             )
         })
     }
